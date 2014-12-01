@@ -1,16 +1,13 @@
 apply plugin: 'java'
+apply plugin:'application'
 
 repositories {
     mavenCentral()
 }
 
+mainClassName = 'com.github.grandmaflash.grizzly_jersey_example.Start'
+
 dependencies {
     compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-http', version: '2.13'
     compile group: 'com.sun.jersey', name: 'jersey-grizzly', version: '1.18.2'
-}
-
-task( run, dependsOn: jar, type: JavaExec ) {
-    main = 'com.github.grandmaflash.grizzly_jersey_example.Start'
-    standardInput = System.in  
-    classpath = sourceSets.main.runtimeClasspath
 }
