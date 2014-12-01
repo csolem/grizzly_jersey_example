@@ -11,3 +11,7 @@ dependencies {
     compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-http', version: '2.13'
     compile group: 'com.sun.jersey', name: 'jersey-grizzly', version: '1.18.2'
 }
+
+run {
+	standardInput = System.in
+}
